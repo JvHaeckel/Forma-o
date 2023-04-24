@@ -1,0 +1,37 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nan</title>
+    </head>
+    <body>
+        
+    <!--Peca a idade do user e verifique se é numero ou não--> 
+
+    <script>
+// Para saber se um valor é NaN precisamos usar uma função específica, a isNaN. Essa função recebe um parâmetro 
+// e retorna true ou false caso o valor seja NaN ou não.
+
+
+let age = parseInt(prompt("Digite sua idade: "));
+
+while( isNaN(age)){
+     age = parseInt(prompt("Digite sua idade: "));
+
+}
+// var idade = parseInt(prompt("Digite sua idade"));
+
+// while( isNaN(idade) ) {
+//     idade = parseInt(prompt("Digite sua idade"));    
+// }
+
+// alert(idade);
+
+        </script>
+
+    </body>
+    </html>
+
+

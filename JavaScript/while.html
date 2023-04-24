@@ -1,0 +1,45 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>While</title>
+    </head>
+    <body>
+     
+    <!--Diga todas as copas desde 1930 e depois diga uma data limite para dizer as copas--> 
+
+    <script>
+
+function pulaLinha() {
+document.write("<br>");
+document.write("<br>");
+}
+
+function mostra(frase) {
+document.write(frase);
+pulaLinha();
+}
+
+// let copa = 1930;
+
+        // while( ano <= 2022 ){
+        //     let copa = copa + 4;
+        //     alert("Teve copa em " + copa);
+        // };
+    
+    let limite = parseInt( prompt("Diga a data limite:")); 
+    //Já que estamos tratando de um número, é uma boa prática colocarmos o parseInt
+    while( ano <= limite ){
+            let copa = copa + 4;
+            alert("Teve copa em " + copa);
+        };
+
+        mostra("FIM");
+
+        </script>
+
+    </body>
+    </html>
+

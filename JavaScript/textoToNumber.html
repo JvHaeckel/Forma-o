@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!--Perguntar ao user o número de vitórias e derrotas do seu time--> 
+
+<script>
+
+    var victory = parseInt(prompt("Digite a quantidade de Vitórias: "));
+    var draw = parseInt(prompt("Digite a quantidade de Empates: "));
+    
+    let score = (victory * 3) + draw;
+    
+    document.write("Seu time marcou: " + score);
+
+    function exibir (dados){
+        document.write(dados);
+        pulaLinha();
+    }
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+    
+    if (score < 28){
+        exibir("Está péssimo");
+    } 
+    else if(score > 28){
+        exibir("Vamos assim");
+    }
+    else{
+        exibir("Igual ao ano passado")
+    }
+    
+    </script>
+
+</body>
+</html>
+
+
