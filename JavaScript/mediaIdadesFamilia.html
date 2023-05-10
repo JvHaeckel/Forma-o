@@ -8,7 +8,8 @@
     </head>
     <body>
     <!--Perguntar ao user quantas pessoas tem na família e as idades para somar e dividir pela quantidade--> 
-    <script>
+   
+   <script>
 
 function pulaLinha() {
 
@@ -16,25 +17,45 @@ document.write("<br>");
 document.write("<br>");
 }
 
+// function mostra(frase) {
+
+// document.write(frase);
+// pulaLinha();
+// }
+
+
+let totalPessoas = parseInt(prompt("Diga a quantidade de pessoas de sua casa:"));
+let num = 1
+let somaAge = 0;
+
+while(num <= totalPessoas){
+   let idade = parseInt(prompt("Digite a idade da " + num + " pessoa:"));
+   somaAge = somaAge + idade;
+    num ++;
+}
+
+let mediaAge = somaAge / totalPessoas;
+//  document.write("A média das idades foi de: " + mediaAge)
+
+mostra("A média das idades foi de: " + mediaAge);
+mostra("Fim")
+
+function pulaLinha() {
+
+document.write("<br>");
+document.write("<br>");
+
+}
+
 function mostra(frase) {
 
 document.write(frase);
 pulaLinha();
+
 }
-
-let qtdF = parseInt( prompt("Diga a quantidade de pessoas de seu casa:"));
-let num = 1
-
-while(num <= qtdF){
-   let idade = prompt("Digite a idade da pessoa " + num + " :");
-    num ++;
-}
-
 
 
         </script>
 
     </body>
     </html>
-
-
