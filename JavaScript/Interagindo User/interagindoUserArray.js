@@ -34,7 +34,39 @@
 let input = document.getElementById("input");
 // input.focus(); /* Assim que entrar na página o teclado permanece no input */
 
-let secrets = [2, 4, 6, 8];
+let secrets = sorteia(5);
+
+function sorteia() {
+    return Math.round(Math.random() * 10);
+}
+
+function sorteiaNumeros(qtd) {
+
+    let secrets = [];
+    let number = 1;
+    let numberAleatorio = sorteia()
+    let achou = false;
+
+    while (number <= qtd) {
+
+        if (numberAleatorio != 0) {
+            for (let i = 0; i < secrets.length; i++) {
+
+                if (secrets[i] == numberAleatorio) {
+                    achou = true;
+                    break
+                }
+            }
+            if (achou == false) {
+                number++;
+                secrets.push(numberAleatorio)
+
+            }
+        }
+    }
+    return secrets;
+
+}
 
 let button = document.querySelector("button");
 button.onclick = verify();
