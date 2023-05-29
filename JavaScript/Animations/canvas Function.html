@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+
+        let tela = document.querySelector('canvas');
+        let pincel = tela.getContext('2d');
+
+
+        function squareMaker(x, y, color) {
+
+            pincel.fillStyle = color
+            pincel.fillRect(x, y, 50, 50);
+
+            pincel.strokeStyle = 'black';
+            pincel.strokeRect(x,y,50,50)
+
+            // pincel.fillRect(55,0,50,50)
+            // pincel.fillRect(55,0,50,50)
+            // pincel.fillRect(55,0,50,50)
+            // pincel.fillRect(55,0,50,50)
+        }
+
+        squareMaker(0, 0, 'blue');
+        squareMaker(100, 50, 'green');
+        squareMaker(200, 300, 'yellow');
+        squareMaker(0, 100, 'grey');
+        squareMaker(400, 0, 'black');
+
+
+    </script>
+
+</body>
+
+</html>

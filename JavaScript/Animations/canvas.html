@@ -13,12 +13,12 @@
     <canvas width="600" height="400"></canvas>
 
     <script>
-        let tela = document.querySelector("canvas");
-        let pincel = tela.getContext("2d");   // 2d significa em 2 dimensões
+        let tela = document.querySelector("canvas"); // seleciona a tela
+        let pincel = tela.getContext("2d");          // 2d - 2 dimensões
 
-        pincel.fillStyle = 'blue'
-        pincel.fillRect(0, 0, 600, 400);  // fill - preencher , rect - retângulo
-        /* (x,y, width, height) */
+        pincel.fillStyle = 'blue'                   // fill - preencher, Style == color
+        pincel.fillRect(0, 0, 600, 400);            // rect - retângulo
+                    /* (x,y, width, height) */
 
         pincel.fillStyle = 'grey'
         pincel.fillRect(0, 0, 200, 400);
@@ -28,7 +28,7 @@
 
         pincel.fillStyle = 'yellow';
         pincel.beginPath();
-        pincel.moveTo(300, 200); // movendo o pincel para escolher onde ele irá pintar
+        pincel.moveTo(300, 200);                    // movendo o pincel para escolher onde ele irá pintar
 
 
         pincel.lineTo(200,400);
