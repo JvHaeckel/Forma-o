@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+<script>
+
+    /*Vamos permitir que o usuário altere a cor da bolinha que é desenhada na tela. As cores serão obrigatoriamente blue, red e green. Perceba que temos uma lista de cores e isso deve remetê-lo à aula de Array do primeiro módulo do curso. */
+
+  let tela = document.querySelector('canvas');
+  let pincel = tela.getContext('2d');
+
+  pincel.fillStyle = 'grey';
+  pincel.fillRect(0, 0, 600, 400);
+
+  let cores = ['blue', 'red', 'green']
+  let indiceCorAtual = 0; // começa com blue
+
+  function desenhaCirculo(evento) {
+    let x = evento.pageX - tela.offsetLeft;
+    let y = evento.pageY - tela.offsetTop;
+    let raio = 10;
+
+    if(evento.shiftKey){
+        pincel.fillStyle = cores[indiceCorAtual];
+    pincel.beginPath();
+    pincel.arc(x, y, 10, 0, 100 * 3.14);
+    pincel.fill();
+    console.log(x + ',' + y);
+    }
+    else{
+        pincel.fillStyle = cores[indiceCorAtual];
+    pincel.beginPath();
+    pincel.arc(x, y, 10, 0, 2 * 3.14);
+    pincel.fill();
+    console.log(x + ',' + y);
+    }
+
+    
+  }
+
+  tela.onclick = desenhaCirculo;
+
+  function mudaCor() {
+    indiceCorAtual++;
+    if (indiceCorAtual >= cores.length) {
+      indiceCorAtual = 0; // volta para a primeira cor, azul
+    }
+    return false; // para não exibir o menu padrão do canvas
+  }
+  tela.oncontextmenu = mudaCor;
+
+</script>
+
+    
+</body>
+
+</html>
